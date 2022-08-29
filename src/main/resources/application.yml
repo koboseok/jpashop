@@ -5,17 +5,17 @@ spring:
     password:
     driver-class-name: org.h2.Driver
 
-  kafka:
-    consumer:
-      bootstrap-servers: 34.220.199.154:9092
-      group-id: group-id-ko
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    producer:
-      bootstrap-servers: 34.220.199.154:9092
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#  kafka:
+#    consumer:
+#      bootstrap-servers: 34.220.199.154:9092
+#      group-id: group-id-ko
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    producer:
+#      bootstrap-servers: 34.220.199.154:9092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
   jpa:
     hibernate:
@@ -24,7 +24,10 @@ spring:
       hibernate:
        # show_sql: true # 운영단계에서는 사용하지 않는다. / systemout으로 찍힌다
         format_sql: true
+        default_batch_fetch_size: 100
 
+server:
+  port: 8081
 
 
 logging:

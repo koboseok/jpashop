@@ -1,4 +1,3 @@
-/*
 package jpabook.jpashop;
 
 import jpabook.jpashop.domain.*;
@@ -11,8 +10,7 @@ import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 
 
-*/
-/**
+/*
  * 조회용 샘플 데이터 입력
  * 총 주문 2개
  * userA
@@ -22,7 +20,7 @@ import javax.persistence.EntityManager;
  * userB
  * - SPRING1 BOOK
  * - SPRING2 BOOK
- *//*
+*/
 
 @Component
 @RequiredArgsConstructor
@@ -103,4 +101,3 @@ public class initDb {
 
 
 
-*/
